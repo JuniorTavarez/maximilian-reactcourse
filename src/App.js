@@ -28,16 +28,21 @@ class App extends Component {
     ],
   };
 
+  switchNameHandler = () => {
+    console.log(this.state.persons);
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really Working!</p>
-        <button>Switch Name</button>
+        <button onClick={this.switchNameHandler}>Switch Name</button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         />
+
         <Person
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
@@ -61,5 +66,5 @@ class App extends Component {
     );
   }
 }
-
+console.log(this);
 export default App;
