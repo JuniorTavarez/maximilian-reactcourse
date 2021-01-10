@@ -29,7 +29,31 @@ class App extends Component {
   };
 
   switchNameHandler = () => {
-    console.log(this.state.persons);
+    // console.log(this);
+    this.setState({
+      persons: [
+        {
+          name: 'Junior',
+          age: 31,
+        },
+        {
+          name: 'Becky',
+          age: 26,
+        },
+        {
+          name: 'Puppy',
+          age: 4,
+        },
+        {
+          name: 'Zara',
+          age: 2,
+        },
+        {
+          name: 'Gideon',
+          age: 1,
+        },
+      ],
+    });
   };
 
   render() {
@@ -55,7 +79,6 @@ class App extends Component {
           name={this.state.persons[3].name}
           age={this.state.persons[3].age}
         >
-          {' '}
           My Hobbies: Dancing
         </Person>
         <Person
